@@ -57,7 +57,7 @@ function PlaceOrder() {
             items: orderItems,
             amount: getCartAmount() + delivery_fee  
           }
-
+          const backendUrl = process.env.REACT_APP_API_URL;
           switch (method) {
 
             // API Calls for COD

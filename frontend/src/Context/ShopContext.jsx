@@ -56,8 +56,9 @@ useEffect(() => {
     setCartItems(cartData);
 
     if (token) {
+      const backendUrl = process.env.REACT_APP_API_URL;
         try {
-
+         
            await axios.post(backendUrl + '/api/cart/add',{itemId,size}, {headers:{token}})
            navigate("/cart");
         } catch (error) {

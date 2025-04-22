@@ -17,6 +17,7 @@ const Login = () => {
    
 
     try {
+      const backendUrl = process.env.REACT_APP_API_URL;
       if (currentState === 'Sign Up') {
         const response = await axios.post(backendUrl + '/api/user/register', { name, email, password });
         if (response.data.success) {

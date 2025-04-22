@@ -46,7 +46,7 @@ function Collection() {
 
     // Appliquer le filtre des sous-catégories
     if (subCategory.length > 0) {
-      productsCopy = productsCopy.filter((item) => subCategory.includes(item.subCategory)); // Assurez-vous que le nom est 'subCategory' (en minuscule)
+      productsCopy = productsCopy.filter((item) => subCategory.includes(item.subCategory));
     }
 
     setFilterProducts(productsCopy);
